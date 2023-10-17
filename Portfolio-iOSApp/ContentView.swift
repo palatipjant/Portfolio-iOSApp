@@ -10,60 +10,93 @@ import SwiftUIFontIcon
 
 struct ContentView: View {
     var body: some View {
-        ScrollView(.vertical){
-            ZStack{
-                Image("home_bg")
-                    .resizable()
-                    .scaledToFit()
-                VStack{
-                    Image("profile_circle")
-                        .padding()
-                    Text("Palatip Jantawong")
-                        .font(.title)
-                        .fontWeight(.heavy)
-                        .padding()
-                    HStack{
-                        Button(action: {
-                            
-                        }, label: {
-                            FontIcon.text(.materialIcon(code: .apps),fontsize: 35)
-                        })
-                        Button(action: {
-                            
-                        }, label: {
-                            FontIcon.text(.materialIcon(code: .apps),fontsize: 35)
-                        })
-                        Button(action: {
-                            
-                        }, label: {
-                            FontIcon.text(.materialIcon(code: .apps),fontsize: 35)
-                        })
-                        Button(action: {
-                            
-                        }, label: {
-                            FontIcon.text(.materialIcon(code: .apps),fontsize: 35)
-                        })
-                        Button(action: {
-                            
-                        }, label: {
-                            FontIcon.text(.materialIcon(code: .apps),fontsize: 35)
-                        })
-                    }
-                    .padding(.bottom)
+        ZStack{
+            Image("home_bg")
+                .resizable()
+                .scaledToFill()
+            VStack{
+                Image("profile_circle")
+                    .padding()
+                Text("Palatip Jantawong")
+                    .font(.title)
+                    .fontWeight(.heavy)
+                    .padding()
+                HStack{
                     Button(action: {
                         
                     }, label: {
-                        Text("Contact Me")
+                        FontIcon.text(.materialIcon(code: .apps),fontsize: 35)
+                    })
+                    Button(action: {
+                        
+                    }, label: {
+                        FontIcon.text(.materialIcon(code: .apps),fontsize: 35)
+                    })
+                    Button(action: {
+                        
+                    }, label: {
+                        FontIcon.text(.materialIcon(code: .apps),fontsize: 35)
+                    })
+                    Button(action: {
+                        
+                    }, label: {
+                        FontIcon.text(.materialIcon(code: .apps),fontsize: 35)
+                    })
+                    Button(action: {
+                        
+                    }, label: {
+                        FontIcon.text(.materialIcon(code: .apps),fontsize: 35)
+                    })
+                }
+                .padding(.bottom)
+                VStack{
+                    Button(action: {
+                        
+                    }, label: {
+                        Text("About Me")
                             .font(.title3)
                             .fontWeight(.semibold)
-                    }).frame(width: 160, height: 45)
+                    }).frame(width: 170, height: 45)
                         .foregroundStyle(.white)
                         .background(Color("lightred"))
                         .clipShape(.capsule)
-                }.foregroundStyle(.white)
-            }
-        }
-        .ignoresSafeArea()
+                        .padding(.bottom)
+                    Button(action: {
+                        
+                    }, label: {
+                        Text("Experience")
+                            .font(.title3)
+                            .fontWeight(.semibold)
+                    }).frame(width: 170, height: 45)
+                        .foregroundStyle(.white)
+                        .background(Color("lightred"))
+                        .clipShape(.capsule)
+                        .padding(.bottom)
+                    Button(action: {
+                        
+                    }, label: {
+                        Text("Work / Projects")
+                            .font(.title3)
+                            .fontWeight(.semibold)
+                    }).frame(width: 170, height: 45)
+                        .foregroundStyle(.white)
+                        .background(Color("lightred"))
+                        .clipShape(.capsule)
+                        .padding(.bottom)
+                    Button(action: {
+                        
+                    }, label: {
+                        Text("Blog")
+                            .font(.title3)
+                            .fontWeight(.semibold)
+                    }).frame(width: 170, height: 45)
+                        .foregroundStyle(.white)
+                        .background(Color("lightred"))
+                        .clipShape(.capsule)
+                    
+                }
+            }.foregroundStyle(.white)
+        }.background(Color("bg_main"))
     }
 }
 
