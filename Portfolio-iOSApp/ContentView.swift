@@ -25,7 +25,9 @@ struct ContentView: View {
                     Button(action: {
                         
                     }, label: {
-                        FontIcon.text(.materialIcon(code: .apps),fontsize: 35)
+                        Image("github_icon")
+                            .resizable()
+                            .frame(width: 25, height: 25)
                     })
                     Button(action: {
                         
