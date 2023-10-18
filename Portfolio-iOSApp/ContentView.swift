@@ -9,6 +9,11 @@ import SwiftUI
 import SwiftUIFontIcon
 
 struct ContentView: View {
+    
+    var contact:Contact_link
+    @Binding var isShowingDetailView: Bool
+    @State private var isShowingSafariView = false
+    
     var body: some View {
         ZStack{
             Image("home_bg")
@@ -16,92 +21,33 @@ struct ContentView: View {
                 .scaledToFill()
             VStack{
                 Image("profile_circle")
-                    .padding()
                 Text("Palatip Jantawong")
-                    .font(.title)
+                    .font(.largeTitle)
                     .fontWeight(.heavy)
-                    .padding()
+                    .padding(10)
                 HStack{
-                    Button(action: {
-                        
-                    }, label: {
-                        Image("github_icon")
-                            .resizable()
-                            .frame(width: 25, height: 25)
-                    })
-                    Button(action: {
-                        
-                    }, label: {
-                        FontIcon.text(.materialIcon(code: .apps),fontsize: 35)
-                    })
-                    Button(action: {
-                        
-                    }, label: {
-                        FontIcon.text(.materialIcon(code: .apps),fontsize: 35)
-                    })
-                    Button(action: {
-                        
-                    }, label: {
-                        FontIcon.text(.materialIcon(code: .apps),fontsize: 35)
-                    })
-                    Button(action: {
-                        
-                    }, label: {
-                        FontIcon.text(.materialIcon(code: .apps),fontsize: 35)
-                    })
+                    ForEach(ContactData.data) { data in
+                        IconButton(contact: data, isShowingDetailView: .constant(false))
+                    }
                 }
-                .padding(.bottom)
                 VStack{
                     Button(action: {
                         
                     }, label: {
                         Text("About Me")
                             .font(.title3)
-                            .fontWeight(.semibold)
+                            .fontWeight(.bold)
                     }).frame(width: 170, height: 45)
+                        .background(.red)
                         .foregroundStyle(.white)
-                        .background(Color("lightred"))
                         .clipShape(.capsule)
-                        .padding(.bottom)
-                    Button(action: {
-                        
-                    }, label: {
-                        Text("Experience")
-                            .font(.title3)
-                            .fontWeight(.semibold)
-                    }).frame(width: 170, height: 45)
-                        .foregroundStyle(.white)
-                        .background(Color("lightred"))
-                        .clipShape(.capsule)
-                        .padding(.bottom)
-                    Button(action: {
-                        
-                    }, label: {
-                        Text("Work / Projects")
-                            .font(.title3)
-                            .fontWeight(.semibold)
-                    }).frame(width: 170, height: 45)
-                        .foregroundStyle(.white)
-                        .background(Color("lightred"))
-                        .clipShape(.capsule)
-                        .padding(.bottom)
-                    Button(action: {
-                        
-                    }, label: {
-                        Text("Blog")
-                            .font(.title3)
-                            .fontWeight(.semibold)
-                    }).frame(width: 170, height: 45)
-                        .foregroundStyle(.white)
-                        .background(Color("lightred"))
-                        .clipShape(.capsule)
-                    
                 }
-            }.foregroundStyle(.white)
-        }.background(Color("bg_main"))
+            }
+        }.ignoresSafeArea()
+        
     }
 }
 
 #Preview {
-    ContentView()
+    ContentView(contact: ContactData.sampledata, isShowingDetailView: .constant(false))
 }

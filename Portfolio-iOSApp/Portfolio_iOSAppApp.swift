@@ -11,7 +11,7 @@ import SwiftUI
 struct Portfolio_iOSAppApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(contact: ContactData.sampledata, isShowingDetailView: .constant(false))
         }
     }
 }
