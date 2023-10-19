@@ -8,11 +8,12 @@
 import SwiftUI
 import SwiftUIFontIcon
 
-struct ContentView: View {
+struct Home_View: View {
     
     var contact:Contact_link
     @Binding var isShowingDetailView: Bool
     @State private var isShowingSafariView = false
+    @State var showAboutme = false
     
     var body: some View {
         ZStack{
@@ -25,6 +26,7 @@ struct ContentView: View {
                     .font(.largeTitle)
                     .fontWeight(.heavy)
                     .padding(10)
+                    .foregroundStyle(.white)
                 HStack{
                     ForEach(ContactData.data) { data in
                         IconButton(contact: data, isShowingDetailView: .constant(false))
@@ -32,7 +34,7 @@ struct ContentView: View {
                 }
                 VStack{
                     Button(action: {
-                        
+                        showAboutme.toggle()
                     }, label: {
                         Text("About Me")
                             .font(.title3)
@@ -41,6 +43,9 @@ struct ContentView: View {
                         .background(.red)
                         .foregroundStyle(.white)
                         .clipShape(.capsule)
+                        .sheet(isPresented: $showAboutme, content: {
+                            AboutMeView(isPreview: true, showAboutme: $showAboutme)
+                        })
                 }
             }
         }.ignoresSafeArea()
@@ -49,5 +54,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView(contact: ContactData.sampledata, isShowingDetailView: .constant(false))
+    Home_View(contact: ContactData.sampledata, isShowingDetailView: .constant(false))
 }

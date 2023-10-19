@@ -7,23 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		64292D842ADFE5680098F513 /* contact_link.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64292D832ADFE5680098F513 /* contact_link.swift */; };
+		64292D842ADFE5680098F513 /* data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64292D832ADFE5680098F513 /* data.swift */; };
 		64292D862ADFEB080098F513 /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64292D852ADFEB080098F513 /* SafariView.swift */; };
 		64292D882ADFF0210098F513 /* IconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64292D872ADFF0210098F513 /* IconButton.swift */; };
+		64292D8A2AE0922F0098F513 /* AboutMeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64292D892AE0922F0098F513 /* AboutMeView.swift */; };
 		646E67BC2ADEA2CF005BBEBB /* Portfolio_iOSAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646E67BB2ADEA2CF005BBEBB /* Portfolio_iOSAppApp.swift */; };
-		646E67BE2ADEA2CF005BBEBB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646E67BD2ADEA2CF005BBEBB /* ContentView.swift */; };
+		646E67BE2ADEA2CF005BBEBB /* Home_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646E67BD2ADEA2CF005BBEBB /* Home_View.swift */; };
 		646E67C02ADEA2D0005BBEBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 646E67BF2ADEA2D0005BBEBB /* Assets.xcassets */; };
 		646E67C32ADEA2D0005BBEBB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 646E67C22ADEA2D0005BBEBB /* Preview Assets.xcassets */; };
 		646E67CB2ADEA923005BBEBB /* SwiftUIFontIcon in Frameworks */ = {isa = PBXBuildFile; productRef = 646E67CA2ADEA923005BBEBB /* SwiftUIFontIcon */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		64292D832ADFE5680098F513 /* contact_link.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = contact_link.swift; sourceTree = "<group>"; };
+		64292D832ADFE5680098F513 /* data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = data.swift; sourceTree = "<group>"; };
 		64292D852ADFEB080098F513 /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
 		64292D872ADFF0210098F513 /* IconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconButton.swift; sourceTree = "<group>"; };
+		64292D892AE0922F0098F513 /* AboutMeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeView.swift; sourceTree = "<group>"; };
 		646E67B82ADEA2CF005BBEBB /* Portfolio-iOSApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Portfolio-iOSApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		646E67BB2ADEA2CF005BBEBB /* Portfolio_iOSAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Portfolio_iOSAppApp.swift; sourceTree = "<group>"; };
-		646E67BD2ADEA2CF005BBEBB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		646E67BD2ADEA2CF005BBEBB /* Home_View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home_View.swift; sourceTree = "<group>"; };
 		646E67BF2ADEA2D0005BBEBB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		646E67C22ADEA2D0005BBEBB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -60,10 +62,11 @@
 			isa = PBXGroup;
 			children = (
 				646E67BB2ADEA2CF005BBEBB /* Portfolio_iOSAppApp.swift */,
-				646E67BD2ADEA2CF005BBEBB /* ContentView.swift */,
+				646E67BD2ADEA2CF005BBEBB /* Home_View.swift */,
+				64292D892AE0922F0098F513 /* AboutMeView.swift */,
 				64292D872ADFF0210098F513 /* IconButton.swift */,
 				64292D852ADFEB080098F513 /* SafariView.swift */,
-				64292D832ADFE5680098F513 /* contact_link.swift */,
+				64292D832ADFE5680098F513 /* data.swift */,
 				646E67BF2ADEA2D0005BBEBB /* Assets.xcassets */,
 				646E67C12ADEA2D0005BBEBB /* Preview Content */,
 			);
@@ -155,10 +158,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				64292D862ADFEB080098F513 /* SafariView.swift in Sources */,
-				646E67BE2ADEA2CF005BBEBB /* ContentView.swift in Sources */,
+				646E67BE2ADEA2CF005BBEBB /* Home_View.swift in Sources */,
 				646E67BC2ADEA2CF005BBEBB /* Portfolio_iOSAppApp.swift in Sources */,
+				64292D8A2AE0922F0098F513 /* AboutMeView.swift in Sources */,
 				64292D882ADFF0210098F513 /* IconButton.swift in Sources */,
-				64292D842ADFE5680098F513 /* contact_link.swift in Sources */,
+				64292D842ADFE5680098F513 /* data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
