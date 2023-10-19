@@ -8,6 +8,11 @@
 import SwiftUI
 
 struct AboutMeView: View {
+    let columns: [GridItem] = [
+        GridItem(.flexible()),
+        GridItem(.flexible())
+    ]
+    
     var isPreview: Bool = false
     @Binding var showAboutme:Bool
     
@@ -18,7 +23,7 @@ struct AboutMeView: View {
                     Spacer()
                     Image("about_me")
                         .resizable()
-                        .frame(width: 183, height: 183)
+                        .frame(width: 100, height: 100)
                         .padding(.vertical, 15)
                     VStack{
                         Text("👋 I'm Fee (Palatip Jantawong)")
@@ -34,7 +39,7 @@ struct AboutMeView: View {
                         }
                             .multilineTextAlignment(.leading)
                             .frame(maxWidth: .infinity)
-                            .font(.system(size: 20, weight: .regular))
+                            .font(.system(size: 16, weight: .regular))
                             .foregroundStyle(Color("bg_main"))
                             .padding(.horizontal, 18)
                         Text("🔥 Skill")
@@ -42,7 +47,24 @@ struct AboutMeView: View {
                             .font(.largeTitle)
                             .fontWeight(.bold)
                             .padding(.horizontal)
-                        
+                        LazyVGrid(columns: columns){
+                            ForEach(About_me.skill_data) { skill in
+                                HStack{
+                                    Image(skill.icon)
+                                        .resizable()
+                                        .frame(width: 40, height: 40)
+                                        .padding(.vertical, 10)
+                                    Text(skill.skill_name)
+                                        .font(.system(size: 16, weight: .regular))
+                                        .foregroundStyle(Color("bg_main"))
+                                        .frame(width: 80, height: 40, alignment: .leading)
+                                        .padding(.horizontal, 1)
+                                        
+                                }.frame(maxWidth: .infinity, alignment: .leading)
+                                    .padding(.horizontal, 18)
+                                    
+                            }
+                        }
                     }
                 }
             }.navigationTitle("🙋🏻‍♀️ About Me")

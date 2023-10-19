@@ -33,19 +33,39 @@ struct Home_View: View {
                     }
                 }
                 VStack{
-                    Button(action: {
-                        showAboutme.toggle()
-                    }, label: {
-                        Text("About Me")
-                            .font(.title3)
-                            .fontWeight(.bold)
-                    }).frame(width: 170, height: 45)
-                        .background(.red)
+                    Group{
+                        Button(action: {
+                            showAboutme.toggle()
+                        }, label: {
+                            Text("About Me")
+                                .font(.title3)
+                                .fontWeight(.bold)
+                        }).sheet(isPresented: $showAboutme, content: {
+                                AboutMeView(isPreview: true, showAboutme: $showAboutme)
+                            })
+                        Button(action: {
+                            showAboutme.toggle()
+                        }, label: {
+                            Text("Experience")
+                                .font(.title3)
+                                .fontWeight(.bold)
+                        }).sheet(isPresented: $showAboutme, content: {
+                                AboutMeView(isPreview: true, showAboutme: $showAboutme)
+                            })
+                        Button(action: {
+                            showAboutme.toggle()
+                        }, label: {
+                            Text("Recent Work")
+                                .font(.title3)
+                                .fontWeight(.bold)
+                        }).sheet(isPresented: $showAboutme, content: {
+                                AboutMeView(isPreview: true, showAboutme: $showAboutme)
+                            })
+                    }.frame(width: 170, height: 45)
+                        .background(Color("lightred"))
                         .foregroundStyle(.white)
                         .clipShape(.capsule)
-                        .sheet(isPresented: $showAboutme, content: {
-                            AboutMeView(isPreview: true, showAboutme: $showAboutme)
-                        })
+                        .padding(.bottom, 10)
                 }
             }
         }.ignoresSafeArea()
