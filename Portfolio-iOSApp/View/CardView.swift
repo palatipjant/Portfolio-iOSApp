@@ -19,39 +19,41 @@ struct CardView: View {
                 Spacer()
                 ForEach(Works.works_data) { work in
                     VStack{
-                        
                         Image(work.image)
                             .resizable()
                             .frame(width: 317, height: 257)
-                            
                             .clipShape(RoundedRectangle(cornerRadius: 10))
+                            .shadow(color: Color(.label).opacity(0.2), radius: 10)
+                            .padding(.bottom)
                         VStack(alignment: .trailing) {
                             Text(work.category)
                                 .font(.headline)
-                                .foregroundColor(.secondary)
-                                .frame(width: 317, alignment: .leading)
+                                .foregroundColor(.gray)
+                                .frame(width: 310, alignment: .leading)
                             Text(work.heading)
+                                .multilineTextAlignment(.leading)
                                 .font(.title)
-                                .fontWeight(.black)
+                                .fontWeight(.bold)
                                 .foregroundColor(.primary)
                                 .lineLimit(3)
-                                .frame(width: 317, alignment: .leading)
+                                .frame(width: 310, alignment: .leading)
                             Text(work.author.uppercased())
                                 .font(.caption)
-                                .foregroundColor(.secondary)
-                                .frame(width: 317, alignment: .leading)
+                                .foregroundColor(.gray)
+                                .frame(width: 310, alignment: .leading)
                             WorksButton(work: work, isShowingDetailView: .constant(false))
                         }
                     }
+                    .padding()
                 }
             }.scrollIndicators(.never)
                 .navigationTitle("👩🏻‍💻 Works")
-                .navigationBarItems(trailing: Button(action: {
-                                    showWorks = false
-                                }) {
-                                    Text("Done").bold()
-                                        .foregroundStyle(Color(.label))
-                                })
+//                .navigationBarItems(trailing: Button(action: {
+//                                    showWorks = false
+//                                }) {
+//                                    Text("Done").bold()
+//                                        .foregroundStyle(Color(.label))
+//                                })
                 .padding(.top)
         }
     }

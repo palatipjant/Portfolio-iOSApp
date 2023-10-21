@@ -24,6 +24,15 @@ struct ContactData {
         Contact_link(icon_name: "facebook_icon", url: "https://www.facebook.com/palatipjant"),
         Contact_link(icon_name: "medium_icon", url: "https://medium.com/@palatipjant")
     ]
+    
+    static let data_dark = [
+        Contact_link(icon_name: "github_d_icon", url: "https://github.com/palatipjant"),
+        Contact_link(icon_name: "linkedin_d_icon", url: "https://www.linkedin.com/in/palatip-jantawong/"),
+        Contact_link(icon_name: "instagram_d_icon", url: "https://www.instagram.com/whos.fee/"),
+        Contact_link(icon_name: "twitter_d_icon", url: "https://twitter.com/palatipjant"),
+        Contact_link(icon_name: "facebook_d_icon", url: "https://www.facebook.com/palatipjant"),
+        Contact_link(icon_name: "medium_d_icon", url: "https://medium.com/@palatipjant")
+    ]
 }
 
 struct Skill: Hashable, Identifiable{

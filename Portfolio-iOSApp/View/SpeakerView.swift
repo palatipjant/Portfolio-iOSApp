@@ -23,33 +23,36 @@ struct SpeakerView: View {
                             .resizable()
                             .frame(width: 317, height: 257)
                             .clipShape(RoundedRectangle(cornerRadius: 10))
+                            .shadow(color: Color(.label).opacity(0.2), radius: 10)
+                            .padding(.bottom)
                         VStack(alignment: .trailing) {
-                            Text(data.category)
+                            Text(data.category.uppercased())
                                 .font(.headline)
-                                .foregroundColor(.secondary)
-                                .frame(width: 317, alignment: .leading)
+                                .foregroundColor(.gray)
+                                .frame(width: 310, alignment: .leading)
                             Text(data.heading)
                                 .font(.title)
-                                .fontWeight(.black)
+                                .fontWeight(.bold)
                                 .foregroundColor(.primary)
                                 .lineLimit(3)
-                                .frame(width: 317, alignment: .leading)
+                                .frame(width: 310, alignment: .leading)
                             Text(data.author.uppercased())
                                 .font(.caption)
-                                .foregroundColor(.secondary)
-                                .frame(width: 317, alignment: .leading)
+                                .foregroundColor(.gray)
+                                .frame(width: 310, alignment: .leading)
                             SpeakerButton(speaker: data, isShowingDetailView: .constant(false))
                         }
                     }
+                        .padding()
                 }
             }.scrollIndicators(.never)
                 .navigationTitle("🎤 Speaker / Hosting")
-                .navigationBarItems(trailing: Button(action: {
-                    showSpeaker = false
-                                }) {
-                                    Text("Done").bold()
-                                        .foregroundStyle(Color(.label))
-                                })
+//                .navigationBarItems(trailing: Button(action: {
+//                    showSpeaker = false
+//                                }) {
+//                                    Text("Done").bold()
+//                                        .foregroundStyle(Color(.label))
+//                                })
                 .padding(.top)
         }
     }

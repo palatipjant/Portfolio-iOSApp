@@ -20,6 +20,7 @@
 		647456A22AE208200034B223 /* WorksButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647456A12AE208200034B223 /* WorksButton.swift */; };
 		647ECAA42AE35C9B001A1B86 /* SpeakerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647ECAA32AE35C9B001A1B86 /* SpeakerView.swift */; };
 		647ECAA62AE35EA2001A1B86 /* SpeakerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647ECAA52AE35EA2001A1B86 /* SpeakerButton.swift */; };
+		649255B82AE4013B00EB66F9 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649255B72AE4013B00EB66F9 /* TabView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		647456A12AE208200034B223 /* WorksButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorksButton.swift; sourceTree = "<group>"; };
 		647ECAA32AE35C9B001A1B86 /* SpeakerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakerView.swift; sourceTree = "<group>"; };
 		647ECAA52AE35EA2001A1B86 /* SpeakerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakerButton.swift; sourceTree = "<group>"; };
+		649255B72AE4013B00EB66F9 /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				646E67BD2ADEA2CF005BBEBB /* Home_View.swift */,
+				649255B72AE4013B00EB66F9 /* TabView.swift */,
 				64292D892AE0922F0098F513 /* AboutMeView.swift */,
 				6474569F2AE1F6E70034B223 /* CardView.swift */,
 				647ECAA32AE35C9B001A1B86 /* SpeakerView.swift */,
@@ -177,6 +180,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				649255B82AE4013B00EB66F9 /* TabView.swift in Sources */,
 				647456A02AE1F6E70034B223 /* CardView.swift in Sources */,
 				64292D862ADFEB080098F513 /* SafariView.swift in Sources */,
 				647ECAA42AE35C9B001A1B86 /* SpeakerView.swift in Sources */,

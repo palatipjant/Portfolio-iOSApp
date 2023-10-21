@@ -69,12 +69,12 @@ struct AboutMeView: View {
                     }
                 }
             }.navigationTitle("🙋🏻‍♀️ About Me")
-                .navigationBarItems(trailing: Button(action: {
-                                    showAboutme = false
-                                }) {
-                                    Text("Done").bold()
-                                        .foregroundStyle(Color(.label))
-                                })
+//                .navigationBarItems(trailing: Button(action: {
+//                                    showAboutme = false
+//                                }) {
+//                                    Text("Done").bold()
+//                                        .foregroundStyle(Color(.label))
+//                                })
         }
     }
 }
