@@ -70,14 +70,33 @@ struct Works {
         Work(image: "portfolio-app", category: "Mobile", heading: "Portfolio iOS App", author: "Palatip Jantawong", url: "https://github.com/palatipjant/Portfolio-iOSApp"),
         Work(image: "apple_framework", category: "Mobile", heading: "Apple Frameworks App", author: "Palatip Jantawong", url: "https://github.com/palatipjant/Apple-Framework-App"),
         Work(image: "meditation_app", category: "Mobile", heading: "Meditation App", author: "Palatip Jantawong",url: "https://github.com/palatipjant/Meditation-App"),
-        Work(image: "design_carbon_offset", category: "Design", heading: "Carbon Offset Platform", author: "Palatip Jantawong", url: "https://dribbble.com/shots/21835307-Carbon-Offset-platform-website"),
-        Work(image: "design_bu_mkp", category: "Design", heading: "BU Marketplace", author: "Palatip Jantawong", url: "www.palatip.com"),
-        Work(image: "design_toret", category: "Design", heading: "Toret Car fo rent", author: "Palatip Jantawong", url: "www.palatip.com"),
+        Work(image: "design_carbon_offset", category: "Design", heading: "Carbon Offset Platform", author: "Palatip Jantawong", url: "https://dribbble.com/shots/21835307-Carbon-Offset-platform-website?utm_source=Clipboard_Shot&utm_campaign=palatipjant&utm_content=Carbon%20Offset%20platform%20website&utm_medium=Social_Share&utm_source=Clipboard_Shot&utm_campaign=palatipjant&utm_content=Carbon%20Offset%20platform%20website&utm_medium=Social_Share"),
+        Work(image: "design_bu_mkp", category: "Design", heading: "BU Marketplace", author: "Palatip Jantawong", url: "https://palatip.com/theme/view"),
+        Work(image: "design_toret", category: "Design", heading: "Toret Car fo rent", author: "Palatip Jantawong", url: "https://palatip.com/theme/view"),
         Work(image: "python-100-days", category: "Software & Application", heading: "100 Days of Code The Complete Python Pro Bootcamp", author: "Palatip Jantawong", url: "https://github.com/palatipjant/100-Days-of-Code-The-Complete-Python-Pro-Bootcamp"),
         Work(image: "doublej", category: "Software & Application", heading: "DoubleJ - POS & Mech", author: "Palatip Jantawong", url: "https://github.com/palatipjant/DoubleJ"),
         Work(image: "peace-tiktok", category: "It's fye", heading: "peace begins with a smile -", author: "Palatip Jantawong", url: "https://www.tiktok.com/@palatipjant/video/7228149032470793477"),
         Work(image: "20facts", category: "It's fye", heading: "จุดเริ่มต้น | It's fye Ep.0", author: "Palatip Jantawong", url: "https://www.youtube.com/@Itsfye"),
         Work(image: "portfolio-website", category: "Website", heading: "Portfolio Website", author: "Palatip Jantawong", url: "https://github.com/palatipjant/portfolio-website"),
         Work(image: "cereal-app", category: "Software & Application", heading: "Cereal Application", author: "Palatip Jantawong", url: "https://github.com/palatipjant/Cereal-Application"),
+    ]
+}
+
+struct Speaker: Hashable, Identifiable{
+    let id = UUID()
+    let image: String
+    let category: String
+    let heading: String
+    let author: String
+    let url: String
+    
+}
+struct Speakers {
+    
+    static let sample_data = 
+        Speaker(image: "python_pathway", category: "Speaker", heading: "Python Developer Pathway (The First Chapter : Be Inspired)", author: "Palatip Jantawong", url: "https://www.facebook.com/msftstudentambassadorsbu/posts/pfbid0NcXtYQisBLDQge4TeB49sM2V2Q9dcr9XX8eKHqAXeWwx37TRZrFg8UkNxviiMUuel")
+        
+    static let speak_data = [
+        Speaker(image: "python_pathway", category: "Speaker", heading: "Python Developer Pathway (The First Chapter : Be Inspired)", author: "Palatip Jantawong", url: "https://www.facebook.com/msftstudentambassadorsbu/posts/pfbid0NcXtYQisBLDQge4TeB49sM2V2Q9dcr9XX8eKHqAXeWwx37TRZrFg8UkNxviiMUuel")
     ]
 }

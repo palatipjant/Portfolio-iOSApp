@@ -43,6 +43,7 @@ struct AboutMeView: View {
                             .foregroundStyle(Color("bg_main"))
                             .padding(.horizontal, 18)
                         Text("🔥 Skill")
+                            .foregroundStyle(Color(.label))
                             .frame(maxWidth: .infinity, alignment: .leading)
                             .font(.largeTitle)
                             .fontWeight(.bold)
@@ -72,6 +73,7 @@ struct AboutMeView: View {
                                     showAboutme = false
                                 }) {
                                     Text("Done").bold()
+                                        .foregroundStyle(Color(.label))
                                 })
         }
     }

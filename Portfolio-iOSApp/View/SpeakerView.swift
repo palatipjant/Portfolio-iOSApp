@@ -1,53 +1,51 @@
 //
-//  CardView.swift
+//  SpeakerView.swift
 //  Portfolio-iOSApp
 //
-//  Created by Palatip Jantawong on 20/10/2566 BE.
+//  Created by Palatip Jantawong on 21/10/2566 BE.
 //
 
 import SwiftUI
 
-struct CardView: View {
+struct SpeakerView: View {
     
     @State private var isShowingSafariView = false
     var isPreview: Bool = false
-    @Binding var showWorks:Bool
+    @Binding var showSpeaker:Bool
     
     var body: some View {
         NavigationView {
             ScrollView{
                 Spacer()
-                ForEach(Works.works_data) { work in
+                ForEach(Speakers.speak_data) { data in
                     VStack{
-                        
-                        Image(work.image)
+                        Image(data.image)
                             .resizable()
                             .frame(width: 317, height: 257)
-                            
                             .clipShape(RoundedRectangle(cornerRadius: 10))
                         VStack(alignment: .trailing) {
-                            Text(work.category)
+                            Text(data.category)
                                 .font(.headline)
                                 .foregroundColor(.secondary)
                                 .frame(width: 317, alignment: .leading)
-                            Text(work.heading)
+                            Text(data.heading)
                                 .font(.title)
                                 .fontWeight(.black)
                                 .foregroundColor(.primary)
                                 .lineLimit(3)
                                 .frame(width: 317, alignment: .leading)
-                            Text(work.author.uppercased())
+                            Text(data.author.uppercased())
                                 .font(.caption)
                                 .foregroundColor(.secondary)
                                 .frame(width: 317, alignment: .leading)
-                            WorksButton(work: work, isShowingDetailView: .constant(false))
+                            SpeakerButton(speaker: data, isShowingDetailView: .constant(false))
                         }
                     }
                 }
             }.scrollIndicators(.never)
-                .navigationTitle("👩🏻‍💻 Works")
+                .navigationTitle("🎤 Speaker / Hosting")
                 .navigationBarItems(trailing: Button(action: {
-                                    showWorks = false
+                    showSpeaker = false
                                 }) {
                                     Text("Done").bold()
                                         .foregroundStyle(Color(.label))
@@ -58,5 +56,5 @@ struct CardView: View {
 }
 
 #Preview {
-    CardView(isPreview: true, showWorks: .constant(false))
+    SpeakerView(isPreview: true, showSpeaker: .constant(false))
 }

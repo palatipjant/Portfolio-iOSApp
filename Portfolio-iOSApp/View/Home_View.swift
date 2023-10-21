@@ -15,6 +15,7 @@ struct Home_View: View {
     @State private var isShowingSafariView = false
     @State var showAboutme = false
     @State var showWorks = false
+    @State var showSpeaker = false
     
     var body: some View {
         ZStack{
@@ -61,6 +62,15 @@ struct Home_View: View {
                                 .fontWeight(.bold)
                         }).sheet(isPresented: $showWorks, content: {
                                 CardView(isPreview: true, showWorks: $showWorks)
+                            })
+                        Button(action: {
+                            showSpeaker.toggle()
+                        }, label: {
+                            Text("Speaker/Hosting")
+                                .font(.title3)
+                                .fontWeight(.bold)
+                        }).sheet(isPresented: $showSpeaker, content: {
+                                SpeakerView(isPreview: true, showSpeaker: $showSpeaker)
                             })
                     }.frame(width: 170, height: 45)
                         .background(Color("lightred"))
