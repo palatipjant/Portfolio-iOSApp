@@ -109,3 +109,25 @@ struct Speakers {
         Speaker(image: "python_pathway", category: "Speaker", heading: "Python Developer Pathway (The First Chapter : Be Inspired)", author: "Palatip Jantawong", url: "https://www.facebook.com/msftstudentambassadorsbu/posts/pfbid0NcXtYQisBLDQge4TeB49sM2V2Q9dcr9XX8eKHqAXeWwx37TRZrFg8UkNxviiMUuel")
     ]
 }
+
+struct Blog: Hashable, Identifiable{
+    let id = UUID()
+    let image: String
+    let category: String
+    let heading: String
+    let author: String
+    let url: String
+}
+
+struct Blogs {
+    static let sample_data = Blog(image: "carbon_app", category: "Awards", heading: "1st place Application Development Competition", author: "Palatip Jantawong", url: "https://www.linkedin.com/feed/update/urn:li:activity:7095910341724770304/")
+    
+    static let blogs_data = [
+        Blog(image: "carbon_app", category: "Awards", heading: "1st place Application Development Competition", author: "Palatip Jantawong", url: "https://www.linkedin.com/feed/update/urn:li:activity:7095910341724770304/"),
+        Blog(image: "angular-deploy", category: "Blog", heading: "วิธี Deploy Angular บน Azure Web App ผ่าน VSCode", author: "Palatip Jantawong", url: "https://medium.com/@palatipjant/%E0%B8%A7%E0%B8%B4%E0%B8%98%E0%B8%B5-deploy-angular-%E0%B8%9A%E0%B8%99-azure-web-app-%E0%B8%9C%E0%B9%88%E0%B8%B2%E0%B8%99-vscode-4959780760df"),
+        Blog(image: "ytsa", category: "YTSA#18", heading: "Young Thai Science Ambassadors", author: "Palatip Jantawong", url: "https://www.linkedin.com/feed/update/urn:li:activity:7024974345076690944/"),
+        Blog(image: "mlsa1", category: "MLSA", heading: "Microsoft Learn Student Ambassadors", author: "Palatip Jantawong", url: "https://mvp.microsoft.com/studentambassadors/certificate/37d5e587-c9f1-4f32-a63b-1ab24fc49bd2"),
+        Blog(image: "basic-file-exploit", category: "Blog", heading: "basic-file-exploit", author: "Palatip Jantawong", url: "https://medium.com/@palatipjant/basic-file-exploit-picoctf-26d9b97e60e8"),
+        Blog(image: "picoCTF-Forensics", category: "Blog", heading: "picoCTF-Forensics", author: "Palatip Jantawong", url: "https://medium.com/@palatipjant/picoctf-forensics-5df13791721")
+    ]
+}

@@ -20,15 +20,19 @@ struct Home_View: View {
     
     var body: some View {
         ZStack{
-//            Image("home_bg")
-//                .resizable()
-//                .scaledToFill()
+            
             VStack{
                 Image("profile_circle")
+                    .padding(.top)
+                    .shadow(color: Color(.label).opacity(0.2), radius: 10)
                 Text("Palatip Jantawong")
                     .font(.largeTitle)
                     .fontWeight(.heavy)
-                    .padding(10)
+                    .padding(.top)
+                Text("🟢 Status: Open for works")
+                    .font(.subheadline)
+                    .fontWeight(.semibold)
+                    .foregroundStyle(Color("status"))
                 HStack{
                     if colorScheme == .dark{
                         ForEach(ContactData.data) { data in
@@ -39,9 +43,12 @@ struct Home_View: View {
                             IconButton(contact: data, isShowingDetailView: .constant(false))
                         }
                     }
-                }
+                }.padding(22)
+                GifImage("cover_gif")
+                                .frame(width: 320, height: 180)
+                                .clipShape(RoundedRectangle(cornerRadius: 20))
             }
-        }.ignoresSafeArea()
+        }
     }
 }
 

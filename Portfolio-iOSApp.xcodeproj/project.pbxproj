@@ -21,6 +21,10 @@
 		647ECAA42AE35C9B001A1B86 /* SpeakerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647ECAA32AE35C9B001A1B86 /* SpeakerView.swift */; };
 		647ECAA62AE35EA2001A1B86 /* SpeakerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647ECAA52AE35EA2001A1B86 /* SpeakerButton.swift */; };
 		649255B82AE4013B00EB66F9 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649255B72AE4013B00EB66F9 /* TabView.swift */; };
+		64F2C7262AE9431A00E346DE /* GifImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F2C7252AE9431A00E346DE /* GifImage.swift */; };
+		64F2C7282AE943A600E346DE /* cover_gif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 64F2C7272AE943A500E346DE /* cover_gif.gif */; };
+		64F2C72A2AE9483300E346DE /* BlogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F2C7292AE9483300E346DE /* BlogView.swift */; };
+		64F2C72C2AE948B600E346DE /* BlogsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F2C72B2AE948B600E346DE /* BlogsButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +42,10 @@
 		647ECAA32AE35C9B001A1B86 /* SpeakerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakerView.swift; sourceTree = "<group>"; };
 		647ECAA52AE35EA2001A1B86 /* SpeakerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakerButton.swift; sourceTree = "<group>"; };
 		649255B72AE4013B00EB66F9 /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
+		64F2C7252AE9431A00E346DE /* GifImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifImage.swift; sourceTree = "<group>"; };
+		64F2C7272AE943A500E346DE /* cover_gif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = cover_gif.gif; sourceTree = "<group>"; };
+		64F2C7292AE9483300E346DE /* BlogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogView.swift; sourceTree = "<group>"; };
+		64F2C72B2AE948B600E346DE /* BlogsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogsButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,8 +82,10 @@
 				646E67BB2ADEA2CF005BBEBB /* Portfolio_iOSAppApp.swift */,
 				647456A12AE208200034B223 /* WorksButton.swift */,
 				647ECAA52AE35EA2001A1B86 /* SpeakerButton.swift */,
+				64F2C72B2AE948B600E346DE /* BlogsButton.swift */,
 				64292D872ADFF0210098F513 /* IconButton.swift */,
 				64292D832ADFE5680098F513 /* data.swift */,
+				64F2C7272AE943A500E346DE /* cover_gif.gif */,
 				647456A32AE20A740034B223 /* View */,
 				646E67BF2ADEA2D0005BBEBB /* Assets.xcassets */,
 				646E67C12ADEA2D0005BBEBB /* Preview Content */,
@@ -94,12 +104,14 @@
 		647456A32AE20A740034B223 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				646E67BD2ADEA2CF005BBEBB /* Home_View.swift */,
 				649255B72AE4013B00EB66F9 /* TabView.swift */,
+				646E67BD2ADEA2CF005BBEBB /* Home_View.swift */,
+				64F2C7252AE9431A00E346DE /* GifImage.swift */,
 				64292D892AE0922F0098F513 /* AboutMeView.swift */,
 				6474569F2AE1F6E70034B223 /* CardView.swift */,
 				647ECAA32AE35C9B001A1B86 /* SpeakerView.swift */,
 				64292D852ADFEB080098F513 /* SafariView.swift */,
+				64F2C7292AE9483300E346DE /* BlogView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -170,6 +182,7 @@
 			files = (
 				646E67C32ADEA2D0005BBEBB /* Preview Assets.xcassets in Resources */,
 				646E67C02ADEA2D0005BBEBB /* Assets.xcassets in Resources */,
+				64F2C7282AE943A600E346DE /* cover_gif.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,13 +195,16 @@
 			files = (
 				649255B82AE4013B00EB66F9 /* TabView.swift in Sources */,
 				647456A02AE1F6E70034B223 /* CardView.swift in Sources */,
+				64F2C7262AE9431A00E346DE /* GifImage.swift in Sources */,
 				64292D862ADFEB080098F513 /* SafariView.swift in Sources */,
 				647ECAA42AE35C9B001A1B86 /* SpeakerView.swift in Sources */,
 				646E67BE2ADEA2CF005BBEBB /* Home_View.swift in Sources */,
 				646E67BC2ADEA2CF005BBEBB /* Portfolio_iOSAppApp.swift in Sources */,
 				64292D8A2AE0922F0098F513 /* AboutMeView.swift in Sources */,
+				64F2C72A2AE9483300E346DE /* BlogView.swift in Sources */,
 				64292D882ADFF0210098F513 /* IconButton.swift in Sources */,
 				647ECAA62AE35EA2001A1B86 /* SpeakerButton.swift in Sources */,
+				64F2C72C2AE948B600E346DE /* BlogsButton.swift in Sources */,
 				647456A22AE208200034B223 /* WorksButton.swift in Sources */,
 				64292D842ADFE5680098F513 /* data.swift in Sources */,
 			);

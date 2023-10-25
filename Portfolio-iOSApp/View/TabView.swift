@@ -26,7 +26,7 @@ struct StartPoint: View {
                     .tabItem {
                         Label("Works", systemImage: "music.mic")
                     }
-                Text("Blog")
+                BlogView(showBlogs: .constant(false))
                     .tabItem {
                         Label("Blog", systemImage: "doc.text.image.fill")
                     }
