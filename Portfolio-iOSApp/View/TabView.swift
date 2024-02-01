@@ -18,7 +18,7 @@ struct StartPoint: View {
                     .tabItem {
                         Label("Search", systemImage: "person.fill")
                     }
-                CardView(showWorks: .constant(false))
+                WorkView(showWorks: .constant(false))
                     .tabItem {
                         Label("Works", systemImage: "desktopcomputer")
                     }

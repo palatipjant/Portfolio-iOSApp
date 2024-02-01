@@ -11,12 +11,13 @@
 		64292D862ADFEB080098F513 /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64292D852ADFEB080098F513 /* SafariView.swift */; };
 		64292D882ADFF0210098F513 /* IconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64292D872ADFF0210098F513 /* IconButton.swift */; };
 		64292D8A2AE0922F0098F513 /* AboutMeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64292D892AE0922F0098F513 /* AboutMeView.swift */; };
+		6431E54B2B6B62DC0034F47B /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 6431E54A2B6B62DC0034F47B /* Kingfisher */; };
 		646E67BC2ADEA2CF005BBEBB /* Portfolio_iOSAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646E67BB2ADEA2CF005BBEBB /* Portfolio_iOSAppApp.swift */; };
 		646E67BE2ADEA2CF005BBEBB /* Home_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646E67BD2ADEA2CF005BBEBB /* Home_View.swift */; };
 		646E67C02ADEA2D0005BBEBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 646E67BF2ADEA2D0005BBEBB /* Assets.xcassets */; };
 		646E67C32ADEA2D0005BBEBB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 646E67C22ADEA2D0005BBEBB /* Preview Assets.xcassets */; };
 		646E67CB2ADEA923005BBEBB /* SwiftUIFontIcon in Frameworks */ = {isa = PBXBuildFile; productRef = 646E67CA2ADEA923005BBEBB /* SwiftUIFontIcon */; };
-		647456A02AE1F6E70034B223 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6474569F2AE1F6E70034B223 /* CardView.swift */; };
+		647456A02AE1F6E70034B223 /* WorkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6474569F2AE1F6E70034B223 /* WorkView.swift */; };
 		647456A22AE208200034B223 /* WorksButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647456A12AE208200034B223 /* WorksButton.swift */; };
 		647ECAA42AE35C9B001A1B86 /* SpeakerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647ECAA32AE35C9B001A1B86 /* SpeakerView.swift */; };
 		647ECAA62AE35EA2001A1B86 /* SpeakerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647ECAA52AE35EA2001A1B86 /* SpeakerButton.swift */; };
@@ -39,7 +40,7 @@
 		646E67BD2ADEA2CF005BBEBB /* Home_View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home_View.swift; sourceTree = "<group>"; };
 		646E67BF2ADEA2D0005BBEBB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		646E67C22ADEA2D0005BBEBB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		6474569F2AE1F6E70034B223 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		6474569F2AE1F6E70034B223 /* WorkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkView.swift; sourceTree = "<group>"; };
 		647456A12AE208200034B223 /* WorksButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorksButton.swift; sourceTree = "<group>"; };
 		647ECAA32AE35C9B001A1B86 /* SpeakerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakerView.swift; sourceTree = "<group>"; };
 		647ECAA52AE35EA2001A1B86 /* SpeakerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakerButton.swift; sourceTree = "<group>"; };
@@ -57,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6431E54B2B6B62DC0034F47B /* Kingfisher in Frameworks */,
 				646E67CB2ADEA923005BBEBB /* SwiftUIFontIcon in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -114,7 +116,7 @@
 				646E67BD2ADEA2CF005BBEBB /* Home_View.swift */,
 				64F2C7252AE9431A00E346DE /* GifImage.swift */,
 				64292D892AE0922F0098F513 /* AboutMeView.swift */,
-				6474569F2AE1F6E70034B223 /* CardView.swift */,
+				6474569F2AE1F6E70034B223 /* WorkView.swift */,
 				647ECAA32AE35C9B001A1B86 /* SpeakerView.swift */,
 				64292D852ADFEB080098F513 /* SafariView.swift */,
 				64F2C7292AE9483300E346DE /* BlogView.swift */,
@@ -140,6 +142,7 @@
 			name = "Portfolio-iOSApp";
 			packageProductDependencies = (
 				646E67CA2ADEA923005BBEBB /* SwiftUIFontIcon */,
+				6431E54A2B6B62DC0034F47B /* Kingfisher */,
 			);
 			productName = "Portfolio-iOSApp";
 			productReference = 646E67B82ADEA2CF005BBEBB /* Portfolio-iOSApp.app */;
@@ -171,6 +174,7 @@
 			mainGroup = 646E67AF2ADEA2CF005BBEBB;
 			packageReferences = (
 				646E67C92ADEA923005BBEBB /* XCRemoteSwiftPackageReference "SwiftUIFontIcon" */,
+				6431E5492B6B62DC0034F47B /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 646E67B92ADEA2CF005BBEBB /* Products */;
 			projectDirPath = "";
@@ -200,7 +204,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				649255B82AE4013B00EB66F9 /* TabView.swift in Sources */,
-				647456A02AE1F6E70034B223 /* CardView.swift in Sources */,
+				647456A02AE1F6E70034B223 /* WorkView.swift in Sources */,
 				64F2C7262AE9431A00E346DE /* GifImage.swift in Sources */,
 				64E9BF7D2B6B361B00B0EC84 /* APError.swift in Sources */,
 				64292D862ADFEB080098F513 /* SafariView.swift in Sources */,
@@ -422,6 +426,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		6431E5492B6B62DC0034F47B /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.10.2;
+			};
+		};
 		646E67C92ADEA923005BBEBB /* XCRemoteSwiftPackageReference "SwiftUIFontIcon" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/huybuidac/SwiftUIFontIcon";
@@ -433,6 +445,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		6431E54A2B6B62DC0034F47B /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6431E5492B6B62DC0034F47B /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
 		646E67CA2ADEA923005BBEBB /* SwiftUIFontIcon */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 646E67C92ADEA923005BBEBB /* XCRemoteSwiftPackageReference "SwiftUIFontIcon" */;

@@ -6,8 +6,9 @@
 //
 
 import SwiftUI
+import Kingfisher
 
-struct CardView: View {
+struct WorkView: View {
     
     @State private var works: [work] = []
     
@@ -21,12 +22,14 @@ struct CardView: View {
                 Spacer()
                 ForEach(works) { work in
                     VStack{
-                        Image("portfolio-app")
-                            .resizable()
-                            .frame(width: 317, height: 257)
-                            .clipShape(RoundedRectangle(cornerRadius: 10))
-                            .shadow(color: Color(.label).opacity(0.2), radius: 10)
-                            .padding(.bottom)
+                        if let url = URL(string: "https://palatipjant-api-66ab44ccf333.herokuapp.com\(work.imageURL)") {
+                            KFImage(url)
+                                .resizable()
+                                .frame(width: 317, height: 257)
+                                .clipShape(RoundedRectangle(cornerRadius: 10))
+                                .shadow(color: Color(.label).opacity(0.2), radius: 10)
+                                .padding(.bottom)
+                        }
                         VStack(alignment: .trailing) {
                             Text(work.tag)
                                 .font(.headline)
@@ -71,5 +74,5 @@ struct CardView: View {
 }
 
 #Preview {
-    CardView(isPreview: true, showWorks: .constant(false))
+    WorkView(isPreview: true, showWorks: .constant(false))
 }
