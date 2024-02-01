@@ -8,15 +8,6 @@
         "revision" : "3ec0ab0bca4feb56e8b33e289c9496e89059dd08",
         "version" : "7.10.2"
       }
-    },
-    {
-      "identity" : "swiftuifonticon",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/huybuidac/SwiftUIFontIcon",
-      "state" : {
-        "revision" : "4f170fbf443d985ae518a14a12ec8194ec6b08eb",
-        "version" : "2.1.0"
-      }
     }
   ],
   "version" : 2
