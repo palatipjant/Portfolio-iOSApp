@@ -9,7 +9,7 @@ import SwiftUI
 
 struct WorksButton: View {
     
-    var work:Work
+    var work:work
     @Binding var isShowingDetailView: Bool
     @State private var isShowingSafariView = false
     
@@ -28,11 +28,11 @@ struct WorksButton: View {
                 .clipShape(.capsule)
                 .padding(.bottom)
         }).sheet(isPresented: $isShowingSafariView, content: {
-                SafariView(url: URL(string: work.url) ?? URL(string: "www.apple.com")!)
+            SafariView(url: URL(string: work.workURL) ?? URL(string: "www.apple.com")!)
             })
     }
 }
 
 #Preview {
-    WorksButton(work: Works.works_sample, isShowingDetailView: .constant(false))
+    WorksButton(work: Mockdata.sampleWork, isShowingDetailView: .constant(false))
 }

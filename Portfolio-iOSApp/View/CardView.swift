@@ -9,6 +9,8 @@ import SwiftUI
 
 struct CardView: View {
     
+    @State private var works: [work] = []
+    
     @State private var isShowingSafariView = false
     var isPreview: Bool = false
     @Binding var showWorks:Bool
@@ -17,27 +19,27 @@ struct CardView: View {
         NavigationView {
             ScrollView{
                 Spacer()
-                ForEach(Works.works_data) { work in
+                ForEach(works) { work in
                     VStack{
-                        Image(work.image)
+                        Image("portfolio-app")
                             .resizable()
                             .frame(width: 317, height: 257)
                             .clipShape(RoundedRectangle(cornerRadius: 10))
                             .shadow(color: Color(.label).opacity(0.2), radius: 10)
                             .padding(.bottom)
                         VStack(alignment: .trailing) {
-                            Text(work.category)
+                            Text(work.tag)
                                 .font(.headline)
                                 .foregroundColor(.gray)
                                 .frame(width: 310, alignment: .leading)
-                            Text(work.heading)
+                            Text(work.title)
                                 .multilineTextAlignment(.leading)
                                 .font(.title)
                                 .fontWeight(.bold)
                                 .foregroundColor(.primary)
                                 .lineLimit(3)
                                 .frame(width: 310, alignment: .leading)
-                            Text(work.author.uppercased())
+                            Text("PALATIP JANTAWONG")
                                 .font(.caption)
                                 .foregroundColor(.gray)
                                 .frame(width: 310, alignment: .leading)
@@ -48,13 +50,22 @@ struct CardView: View {
                 }
             }.scrollIndicators(.never)
                 .navigationTitle("👩🏻‍💻 Works")
-//                .navigationBarItems(trailing: Button(action: {
-//                                    showWorks = false
-//                                }) {
-//                                    Text("Done").bold()
-//                                        .foregroundStyle(Color(.label))
-//                                })
                 .padding(.top)
+        }
+        .onAppear{
+            getWorks()
+        }
+    }
+    func getWorks() {
+        NetworkManager.shared.getWorks { result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let works):
+                    self.works = works
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
+            }
         }
     }
 }

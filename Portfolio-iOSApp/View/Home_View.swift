@@ -6,10 +6,8 @@
 //
 
 import SwiftUI
-import SwiftUIFontIcon
 
 struct Home_View: View {
-    
     var contact:Contact_link
     @Environment(\.colorScheme) var colorScheme
     @Binding var isShowingDetailView: Bool
@@ -46,10 +44,11 @@ struct Home_View: View {
                 }.padding(22)
                 GifImage("cover_gif")
                                 .frame(width: 320, height: 180)
-                                .clipShape(RoundedRectangle(cornerRadius: 20))
+                                .clipShape(RoundedRectangle(cornerRadius: 8))
             }
         }
     }
+    
 }
 
 #Preview {
